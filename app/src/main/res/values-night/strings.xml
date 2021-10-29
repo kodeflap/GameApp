@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tork</string>
+    <string name="heading">CREATE AN ACCOUNT</string>
+    <string name="spin_wheeel">Spin Wheeel</string>
+    <string name="invite_friends">Invite Friends</string>
+</resources>
