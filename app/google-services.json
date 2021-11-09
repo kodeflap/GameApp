@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "317930769344",
-    "project_id": "tork-e9d36",
-    "storage_bucket": "tork-e9d36.appspot.com"
+    "project_number": "652700958391",
+    "project_id": "tork-d3099",
+    "storage_bucket": "tork-d3099.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:317930769344:android:8e52e79f3778b62fde5625",
+        "mobilesdk_app_id": "1:652700958391:android:e34bf99c916dc1788d5732",
         "android_client_info": {
           "package_name": "com.quizapp.tork"
         }
       },
       "oauth_client": [
         {
-          "client_id": "317930769344-r48o5vi8hgddpp7taqm2gjf6aqc2mvav.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.quizapp.tork",
-            "certificate_hash": "d80708db5522f406bad9c609bdbb2c7ae23e7a43"
-          }
-        },
-        {
-          "client_id": "317930769344-83ref5niql73505if64fba69varbq4f4.apps.googleusercontent.com",
+          "client_id": "652700958391-7q8ddrtcmicda0aa3r89hjbv27v6hpg4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDZcpdbgPR3PEExPDjr3Rkm65ZOMpGgOB8"
+          "current_key": "AIzaSyCW2IIeRD5EA5DqmT8bcPx1f7ZSl1JPj4o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "317930769344-83ref5niql73505if64fba69varbq4f4.apps.googleusercontent.com",
+              "client_id": "652700958391-7q8ddrtcmicda0aa3r89hjbv27v6hpg4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
