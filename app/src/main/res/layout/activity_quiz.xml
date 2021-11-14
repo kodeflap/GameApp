@@ -10,6 +10,20 @@
     android:textAlignment="center"
     tools:context=".QuizActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:progress="0"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/ques_counter"
+        app:layout_constraintStart_toEndOf="@+id/timer"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/ques_counter"
         android:layout_width="wrap_content"
@@ -77,16 +91,16 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_margin="10dp"
             android:background="#DDF7F9FA"
             app:srcCompat="@drawable/trophy" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_margin="10dp"
             android:background="#DDF7F9FA"
             app:srcCompat="@drawable/trophy" />
@@ -112,12 +126,15 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:background="@drawable/wrong_option"
+            android:background="@drawable/edit_text"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:onClick="onClick"
             android:padding="10dp"
             android:text="Option1"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/op_2"
@@ -127,12 +144,15 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:background="@drawable/correct_option"
+            android:background="@drawable/edit_text"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:onClick="onClick"
             android:padding="10dp"
             android:text="Option2"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/op_3"
@@ -143,11 +163,14 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/edit_text"
+            android:clickable="true"
+            android:minHeight="48dp"
+            android:onClick="onClick"
             android:padding="10dp"
             android:text="Option3"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/op_4"
@@ -158,11 +181,14 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/edit_text"
+            android:minHeight="48dp"
+            android:onClick="onClick"
             android:padding="10dp"
             android:text="Option4"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="10sp"
+            android:clickable="true" />
     </LinearLayout>
 
     <LinearLayout
@@ -186,7 +212,7 @@
             android:text="Quiz"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/next"
@@ -194,12 +220,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/button_in"
+            android:onClick="onClick"
             android:padding="10dp"
             android:paddingTop="5dp"
             android:text="Next"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,16 +18,21 @@ class LoginScreen : AppCompatActivity() {
     var auth = FirebaseAuth.getInstance()
     var database = FirebaseFirestore.getInstance()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_screen)
+
+        if(auth.currentUser != null)
+        {
+            startActivity(Intent(this@LoginScreen, HomeScreen::class.java))
+            finish()
+        }
 
         l_login_in.setOnClickListener{
 
             authLogin()
         }
-        l_sign_in.setOnClickListener(View.OnClickListener {
+        register.setOnClickListener(View.OnClickListener {
             val intent = Intent(this,SignUpScreen::class.java)
             startActivity(intent)
             finish()
@@ -36,14 +41,11 @@ class LoginScreen : AppCompatActivity() {
     }
     private fun authLogin() {
 
-        email = s_email.text.toString().trim()
-        password = s_psw.text.toString().trim()
-
-        //User user = new User(name,email,password,refCode)
-
+        email = l_email.text.toString().trim()
+        password = l_psw.text.toString().trim()
 
         // create user
-        auth.createUserWithEmailAndPassword(email,password)
+        auth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener(this, OnCompleteListener { task ->
                 if(task.isSuccessful){
 
@@ -52,7 +54,7 @@ class LoginScreen : AppCompatActivity() {
                     //   database.collection("users").document(uid!!).set(user).addOnCompleteListener(onCompleteListener)
 
 
-                    Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this,HomeScreen::class.java)
                     startActivity(intent)
                     finish()

@@ -15,14 +15,15 @@
         <activity android:name=".ResultActivity"></activity>
         <activity android:name=".QuizActivity"></activity>
         <activity android:name=".HomeScreen"></activity>
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".SignUpScreen">
+        <activity android:name=".LoginScreen"
+            android:exported="true">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".SignUpScreen"/>
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@ import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_login_screen.*
+import com.quizapp.tork.model.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 
@@ -49,9 +49,9 @@ class SignUpScreen : AppCompatActivity() {
         email = s_email.text.toString().trim()
         password = s_psw.text.toString().trim()
         name = s_name.text.toString().trim()
-        refCode = s_psw.text.toString().trim()
+        refCode = ref_code.text.toString().trim()
 
-        //User user = new User(name,email,password,refCode)
+        val user = User(name,email,password,refCode)
 
 
         // create user
@@ -61,13 +61,24 @@ class SignUpScreen : AppCompatActivity() {
 
                     var uid = task.result?.user?.uid
 
-                 //   database.collection("users").document(uid!!).set(user).addOnCompleteListener(onCompleteListener)
+                 database.collection("users")
+                     .document(uid!!)
+                     .set(user)
+                     .addOnCompleteListener(OnCompleteListener { task ->
 
+                         if (task.isSuccessful){
 
-                    Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this,HomeScreen::class.java)
-                    startActivity(intent)
-                    finish()
+                             Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
+                             val intent = Intent(this,HomeScreen::class.java)
+                             startActivity(intent)
+                             finish()
+                         }
+                         else
+                         {
+                             Toast.makeText(this, task.exception?.localizedMessage, Toast.LENGTH_LONG).show()
+                         }
+                     })
+
                 }
                 else{
                     Toast.makeText(this, task.exception?.localizedMessage, Toast.LENGTH_LONG).show()
