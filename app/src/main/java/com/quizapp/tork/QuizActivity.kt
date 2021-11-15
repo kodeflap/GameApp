@@ -1,5 +1,6 @@
 package com.quizapp.tork
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -16,9 +17,10 @@ import kotlin.random.Random
 class QuizActivity : AppCompatActivity() {
 
     private var index = 0
-    var time:CountDownTimer? = null
+    private var crct = 0
+    private var time:CountDownTimer? = null
     private var question  = ArrayList<Question>()
-    var quest = Question()
+    private var quest = Question()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,30 +31,52 @@ class QuizActivity : AppCompatActivity() {
         val random = Random.nextInt(12)
 
 
-      /*  database.collection("categories")
+      database.collection("categories")
             .document(catId!!)
             .collection("Questions")
-            .whereLessThanOrEqualTo("index", random)
+            .whereGreaterThanOrEqualTo("index",random)
             .orderBy("index")
             .limit(5)
             .get().addOnSuccessListener { querySnapshot ->
-                if (querySnapshot.documents.size < 5) {
-                    database.collection("categories")
-                        .document(catId!!)
-                        .collection("Questions")
-                        .whereLessThanOrEqualTo("index", random)
-                        .orderBy("index")
-                        .limit(5)
-                        .get().addOnSuccessListener { querySnapshot ->
-                            if (querySnapshot.documents.size < 5) {
+              if(querySnapshot.documents.size < 5)
+              {
+                  database.collection("categories")
+                      .document(catId)
+                      .collection("Questions")
+                      .whereLessThanOrEqualTo("index",random)
+                      .orderBy("index")
+                      .limit(5)
+                      .get().addOnSuccessListener { querySnapshot ->
+                          for(snapshot : DocumentSnapshot in querySnapshot)
+                              run {
+                                  val questions: Question =
+                                      snapshot.toObject(Question::class.java)!!
+                                  question.add(questions)
+                              }
+                      }
+              }
+              else
+              {
+                  for(snapshot : DocumentSnapshot in querySnapshot)
+                      run {
+                          val q:Question = snapshot.toObject(Question::class.java)!!
+                          question.add(q)
 
-                            }
-                        }
-                } else {
+                      }
+              }
+          }
 
-            }
+       /** database.collection("categories")
+            .addSnapshotListener{ snapshot, _ ->
+                data.clear()
+                snapshot?.documents?.forEach{ documentSnapshot ->
+                    val category: Category? = documentSnapshot.toObject(Category::class.java)
+                    category?.cat_id = documentSnapshot.id
+                    data.add(category!!)
+                }
+                adapter.notifyDataSetChanged()
+            }**/
 
-            }*/
         timerClock()
         setQuestion()
     }
@@ -75,12 +99,14 @@ class QuizActivity : AppCompatActivity() {
             progressBar.max = question.size
         }
     }
+
     private fun checkAnswer(textView: TextView){
 
         val selectedAns = textView.text.toString()
         if(selectedAns == quest.ans)
         {
-           textView.background = ContextCompat.getDrawable(this,R.drawable.correct_option)
+            crct++
+            textView.background = ContextCompat.getDrawable(this,R.drawable.correct_option)
         }
         else
         {
@@ -108,7 +134,7 @@ class QuizActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                TODO("Not yet implemented")
+
             }
 
         }
@@ -140,13 +166,18 @@ class QuizActivity : AppCompatActivity() {
             R.id.next -> {
 
                 reset()
-                if(index < question.size) {
+                if(index <= question.size) {
                     index++
                     setQuestion()
                 }
                 else
                 {
-                    Toast.makeText(this,"Quiz Finished",Toast.LENGTH_LONG).show()
+                    val intent = Intent(this@QuizActivity,ResultActivity::class.java)
+                    intent.putExtra("correct",crct)
+                    intent.putExtra("total",question.size)
+                    startActivity(intent)
+                    finish()
+                    //Toast.makeText(this,"Quiz Finished",Toast.LENGTH_LONG).show()
                 }
             }
             R.id.quiz -> { }

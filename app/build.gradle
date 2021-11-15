@@ -4,11 +4,17 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
+    id 'org.jetbrains.dokka-android'
 }
 
 android {
     compileSdk 31
     buildToolsVersion '30.0.3'
+
+    dokka {
+        outputFormat = 'html'
+        outputDirectory = "$buildDir/javadoc"
+    }
 
     defaultConfig {
         applicationId "com.quizapp.tork"

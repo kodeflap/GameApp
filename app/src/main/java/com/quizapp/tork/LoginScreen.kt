@@ -54,7 +54,7 @@ class LoginScreen : AppCompatActivity() {
                     //   database.collection("users").document(uid!!).set(user).addOnCompleteListener(onCompleteListener)
 
 
-                    //Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this,HomeScreen::class.java)
                     startActivity(intent)
                     finish()

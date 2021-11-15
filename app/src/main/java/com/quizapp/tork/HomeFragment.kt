@@ -1,26 +1,17 @@
 package com.quizapp.tork
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.quizapp.tork.adapter.CategoryAdapter
 import com.quizapp.tork.model.Category
 
 class HomeFragment : Fragment() {
-
-    var database = FirebaseFirestore.getInstance()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,15 +25,15 @@ class HomeFragment : Fragment() {
         val adapter = CategoryAdapter(data)
 
         database.collection("categories")
-            .addSnapshotListener(EventListener { snapshot, error ->
+            .addSnapshotListener{ snapshot, _ ->
                 data.clear()
                 snapshot?.documents?.forEach{ documentSnapshot ->
-                    var category: Category? = documentSnapshot.toObject(Category::class.java)
+                    val category: Category? = documentSnapshot.toObject(Category::class.java)
                     category?.cat_id = documentSnapshot.id
                     data.add(category!!)
                 }
-                adapter.notifyDataSetChanged();
-            })
+                adapter.notifyDataSetChanged()
+            }
 
         recycler.layoutManager = GridLayoutManager(context,2)
         recycler.adapter = adapter

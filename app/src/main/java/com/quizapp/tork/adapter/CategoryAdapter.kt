@@ -1,20 +1,16 @@
 package com.quizapp.tork.adapter
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.quizapp.tork.LoginScreen
 import com.quizapp.tork.QuizActivity
 import com.quizapp.tork.R
 import com.quizapp.tork.model.Category
-import kotlin.coroutines.coroutineContext
 
 
 class CategoryAdapter(private val catList: List<Category>) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){
@@ -28,7 +24,7 @@ class CategoryAdapter(private val catList: List<Category>) : RecyclerView.Adapte
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val view = LayoutInflater.from(parent?.context)
+        val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.home_category,parent,false)
         return ViewHolder(view)
     }
@@ -41,12 +37,12 @@ class CategoryAdapter(private val catList: List<Category>) : RecyclerView.Adapte
             .load(category.image)
             .into(holder.img)
         holder.cate.text = category.cat_title
-        holder.itemView.setOnClickListener(View.OnClickListener {
+        holder.itemView.setOnClickListener{
 
             val intent = Intent(context,QuizActivity::class.java)
             intent.putExtra("catId",category.cat_id)
             context.startActivity(intent)
-        })
+        }
     }
 
     override fun getItemCount(): Int {
