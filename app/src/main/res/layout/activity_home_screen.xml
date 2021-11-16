@@ -41,6 +41,8 @@
         android:layout_margin="10dp"
         android:background="@drawable/bottom_nav"
         android:clipChildren="false"
+        app:itemIconTint="@color/purple_200"
+        app:itemTextColor="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

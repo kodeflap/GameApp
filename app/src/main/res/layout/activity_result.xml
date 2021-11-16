@@ -23,7 +23,7 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:background="@drawable/bg_top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/score"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="@+id/score"
         app:layout_constraintTop_toBottomOf="@+id/score" />
 
@@ -106,21 +106,14 @@
         app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/share"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_in"
-        android:text="Share"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/coins"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coins" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/restart"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/button"
         android:text="Restart"
         android:textColor="@color/white"

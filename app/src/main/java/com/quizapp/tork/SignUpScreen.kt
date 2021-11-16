@@ -59,7 +59,7 @@ class SignUpScreen : AppCompatActivity() {
             .addOnCompleteListener(this, OnCompleteListener { task ->
                 if(task.isSuccessful){
 
-                    var uid = task.result?.user?.uid
+                    val uid = task.result?.user?.uid
 
                  database.collection("users")
                      .document(uid!!)
@@ -70,6 +70,7 @@ class SignUpScreen : AppCompatActivity() {
 
                              Toast.makeText(this, "Successfully Registered...", Toast.LENGTH_SHORT).show()
                              val intent = Intent(this,HomeScreen::class.java)
+                             //intent.putExtra("uname",name)
                              startActivity(intent)
                              finish()
                          }

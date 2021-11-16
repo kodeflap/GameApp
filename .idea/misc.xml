@@ -3,17 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Tork/app/src/main/res/drawable/background.xml" value="0.1585" />
+        <entry key="..\:/Tork/app/src/main/res/drawable/bg_top.xml" value="0.1585" />
+        <entry key="..\:/Tork/app/src/main/res/drawable/bottom_nav.xml" value="0.1585" />
+        <entry key="..\:/Tork/app/src/main/res/drawable/button.xml" value="0.1585" />
+        <entry key="..\:/Tork/app/src/main/res/drawable/button_in.xml" value="0.1585" />
+        <entry key="..\:/Tork/app/src/main/res/drawable/button_submit.xml" value="0.1585" />
+        <entry key="..\:/Tork/app/src/main/res/drawable/edit_text.xml" value="0.1585" />
         <entry key="..\:/Tork/app/src/main/res/layout/activity_home_screen.xml" value="0.1287568306010929" />
         <entry key="..\:/Tork/app/src/main/res/layout/activity_login_screen.xml" value="0.1" />
         <entry key="..\:/Tork/app/src/main/res/layout/activity_main.xml" value="0.12894736842105264" />
-        <entry key="..\:/Tork/app/src/main/res/layout/activity_quiz.xml" value="0.1675929884566054" />
+        <entry key="..\:/Tork/app/src/main/res/layout/activity_quiz.xml" value="0.21" />
         <entry key="..\:/Tork/app/src/main/res/layout/activity_result.xml" value="0.1675929884566054" />
         <entry key="..\:/Tork/app/src/main/res/layout/activity_sign_up.xml" value="0.12894736842105264" />
         <entry key="..\:/Tork/app/src/main/res/layout/fragment_home.xml" value="0.12" />
         <entry key="..\:/Tork/app/src/main/res/layout/fragment_leader_board.xml" value="0.1675929884566054" />
         <entry key="..\:/Tork/app/src/main/res/layout/fragment_wallet.xml" value="0.1675929884566054" />
         <entry key="..\:/Tork/app/src/main/res/layout/home_category.xml" value="0.1" />
-        <entry key="..\:/Tork/app/src/main/res/layout/leader_board_item.xml" value="0.1287568306010929" />
+        <entry key="..\:/Tork/app/src/main/res/layout/leader_board_item.xml" value="0.2" />
         <entry key="..\:/Tork/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>

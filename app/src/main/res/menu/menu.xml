@@ -4,23 +4,19 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/home"
-        android:title="Home"
-        android:iconTint="@color/purple_900"
+        android:title="@string/home"
         android:checked="true"
         />
     <item
         android:id="@+id/trophy"
         android:icon="@drawable/trophy"
-        android:title="trophy"
-        android:iconTint="@color/purple_900"/>
+        android:title="@string/trophy" />
     <item
         android:id="@+id/wallet"
         android:icon="@drawable/wallet"
-        android:title="wallet"
-        android:iconTint="@color/purple_900"/>
+        android:title="@string/wallet" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/t_user"
-        android:title="Profile"
-        android:iconTint="@color/purple_900"/>
+        android:title="@string/profile" />
 </menu>

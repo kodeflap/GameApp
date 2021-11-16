@@ -4,4 +4,8 @@
     <string name="spin_wheel">Spin Wheel</string>
     <string name="invite_friends">Invite Friends</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="trophy">trophy</string>
+    <string name="wallet">wallet</string>
+    <string name="profile">Profile</string>
 </resources>

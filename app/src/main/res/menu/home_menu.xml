@@ -5,8 +5,6 @@
     <item
         android:icon="@drawable/home_wallet"
         android:title="wallet"
-        android:iconTint="@color/white"
-
         android:id="@+id/wallet"
         app:showAsAction="always"/>
 </menu>

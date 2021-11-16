@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.quizapp.tork.adapter.CategoryAdapter
 import com.quizapp.tork.model.Category
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
 
@@ -20,10 +22,12 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val database = FirebaseFirestore.getInstance()
+        val auth = FirebaseAuth.getInstance()
+        val user = auth.currentUser?.displayName
         val recycler = view.findViewById<RecyclerView>(R.id.cat_items)
         val data = ArrayList<Category>()
         val adapter = CategoryAdapter(data)
-
+        view.uname.text = user
         database.collection("categories")
             .addSnapshotListener{ snapshot, _ ->
                 data.clear()
