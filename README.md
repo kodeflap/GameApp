@@ -6,13 +6,22 @@ A simple mini quiz game app about programming languages.
 
 ![Logo](https://www.canva.com/design/DAEpr3z414Y/kyMpUZqI_-w4yXcJnAAQNA/view?utm_content=DAEpr3z414Y&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
 
-## Appendix
+## About
 
 The app is a sample quiz with integration of Firebase. The categories are added in Firestore and fetched to show.The user is authention is done by Google auth.The quizes are time bound  and coins are added as reward from a starting of 10 coins.
 
-## Contributing
+## Technologies
 
-Contributions are always welcome!
+The project mainly uses
+Front end
+*kotlin
+Back end
+*Firebase
+
+## Project Status
+The project is under construction with minor modifications.
+Finished
+
 
 ## Screenshots
 
