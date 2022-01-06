@@ -26,7 +26,7 @@ Finished
 ## Screenshots
 
 ![App Screenshot](https://github.com/poojaOfficial321/GameApp/blob/master/png_20211117_120144_0000.png)
-![alt tag](https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-14-26.png)
+![alt tag](https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-14-26.png) {;height = "100px" width = "50px}
 ![alt tag](https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-33-77.png)
 ![alt tag](https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-38-68.png)
 ![alt tag](https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-30-12-15.png)
