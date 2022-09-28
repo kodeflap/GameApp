@@ -103,6 +103,8 @@ Suggested naming **feature/ feature_name
 
 5. Open pull request
 
+If you find issues kindly put that it as issue in the repository
+
 ## LICENSE
 
 [MIT license](LICENSE)
