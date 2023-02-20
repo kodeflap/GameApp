@@ -1,6 +1,6 @@
 
 
-# <table><tr><td><img src= "https://github.com/poojaOfficial321/GameApp/blob/master/20211117_114241_0000.png" height = 50px width = 50px/></td>
+# <table><tr><td><img src= "https://github.com/kodeflap/GameApp/blob/master/screenshot/20211117_114241_0000.png" height = 50px width = 50px/></td>
 <td>Tork(Quiz game app)</td></tr></table>
 
 ## About
@@ -46,11 +46,11 @@ The app is a sample quiz with integration of Firebase. The categories are added 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/poojaOfficial321/GameApp/blob/master/png_20211117_120144_0000.png)
-<table><tr><td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-14-26.png"/></td>
-<td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-33-77.png"/></td>
-<td> <img src ="https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-29-38-68.png"/></td>
-<td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/Screenshot_2022-01-07-00-30-12-15.png"/></td></tr></table>
+![App Screenshot](https://github.com/kodeflap/GameApp/blob/master/screenshot/png_20211117_120144_0000.png)
+<table><tr><td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-29-14-26.png"/></td>
+<td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-29-33-77.png"/></td>
+<td> <img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-29-38-68.png"/></td>
+<td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-30-12-15.png"/></td></tr></table>
 
 ## Lessons Learned
 
