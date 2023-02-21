@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import com.quizapp.tork.model.Category
 import com.quizapp.tork.model.Question
 import kotlinx.android.synthetic.main.activity_quiz.*
 import kotlin.random.Random
@@ -66,16 +67,16 @@ class QuizActivity : AppCompatActivity() {
               }
           }
 
-       /** database.collection("categories")
-            .addSnapshotListener{ snapshot, _ ->
-                data.clear()
-                snapshot?.documents?.forEach{ documentSnapshot ->
-                    val category: Category? = documentSnapshot.toObject(Category::class.java)
-                    category?.cat_id = documentSnapshot.id
-                    data.add(category!!)
-                }
-                adapter.notifyDataSetChanged()
-            }**/
+//        database.collection("categories")
+//            .addSnapshotListener{ snapshot, _ ->
+//                data.clear()
+//                snapshot?.documents?.forEach{ documentSnapshot ->
+//                    val category: Category? = documentSnapshot.toObject(Category::class.java)
+//                    category?.cat_id = documentSnapshot.id
+//                    data.add(category!!)
+//                }
+//                adapter.notifyDataSetChanged()
+//            }
 
         timerClock()
         setQuestion()

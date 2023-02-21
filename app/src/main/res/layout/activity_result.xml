@@ -5,31 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center|clip_vertical|center_horizontal"
-    android:background="@drawable/home_bg"
     app:layout_constraintVertical_bias="0"
+    android:background="@drawable/background"
     tools:context=".ResultActivity">
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/bg_top"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/bg_top"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/winner_trophy" />
 
     <TextView
@@ -57,7 +44,7 @@
         android:paddingTop="10dp"
         android:text="Your Score"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -86,7 +73,7 @@
         android:padding="20dp"
         android:text="Earned Coins"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/score"
         app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toStartOf="@+id/score"
@@ -94,10 +81,11 @@
 
     <TextView
         android:id="@+id/coins"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="500"
+        android:textAlignment="center"
         android:textColor="@color/oranage_700"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -112,13 +100,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="152dp"
         android:background="@drawable/button"
         android:text="Restart"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/share"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coins" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

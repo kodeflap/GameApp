@@ -36,7 +36,7 @@ class WalletFragment : Fragment() {
             }
         view.send.setOnClickListener(View.OnClickListener {view ->
 
-            if(user.coins!! > 5000)
+            if(user.coins!! > 5)
             {
                 val uid = FirebaseAuth.getInstance().uid
                 val paypal = paypal.text
@@ -50,7 +50,7 @@ class WalletFragment : Fragment() {
             }
             else
             {
-                Toast.makeText(context,"You need more than 5000 to withdraw ",Toast.LENGTH_LONG).show()
+                Toast.makeText(context,"You need more than 1000 to withdraw ",Toast.LENGTH_LONG).show()
             }
         })
         return view

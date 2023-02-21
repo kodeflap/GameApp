@@ -1,6 +1,8 @@
 package com.quizapp.tork
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +30,7 @@ class HomeFragment : Fragment() {
         val data = ArrayList<Category>()
         val adapter = CategoryAdapter(data)
         view.uname.text = user
+        Log.i(TAG,"user $user")
         database.collection("categories")
             .addSnapshotListener{ snapshot, _ ->
                 data.clear()

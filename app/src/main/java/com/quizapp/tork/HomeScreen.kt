@@ -17,17 +17,11 @@ class HomeScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
-
-        setSupportActionBar(toolbar)
-
         val frag = supportFragmentManager.findFragmentById(R.id.nav_host)
         val navController = frag?.findNavController()
         if (navController != null) {
             bottomNav.setupWithNavController(navController)
         }
-        // val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment,R.id.leaderBoardFragment,R.id.walletFragment,R.id.profileFragment))
-        // setupActionBarWithNacController(navController,appBarConfiguration)
-
     }
 
    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
