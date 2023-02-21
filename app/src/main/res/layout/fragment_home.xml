@@ -4,65 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/home_bg"
         app:layout_constraintVertical_bias="0"
         tools:context=".HomeScreen">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:titleTextColor="@color/white"
-            android:background="@color/transparent"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/uname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="53dp"
             android:fontFamily="sans-serif-medium"
+            android:padding="10dp"
             android:text="name"
-            android:textColor="@color/white"
+            android:textColor="@color/purple_200"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_goneMarginTop="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/cat_items"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0"/>
-
-        <View
-            android:id="@+id/top_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:background="@drawable/bg_top"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:layout_constraintVertical_bias="0"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Let's Play"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uname" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cat_items"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/top_bg"
-            app:layout_constraintVertical_bias=".1"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
