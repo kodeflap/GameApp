@@ -3,7 +3,8 @@
 # <table><tr><td><img src= "https://github.com/kodeflap/GameApp/blob/master/screenshot/20211117_114241_0000.png" height = 50px width = 50px/></td>
 <td>Tork(Quiz game app)</td></tr></table>
 
-https://user-images.githubusercontent.com/86681482/221004080-277deb20-eddd-41a8-924e-068c7eda539d.mp4
+
+![App](https://user-images.githubusercontent.com/86681482/221010484-26ba38e1-1926-4eea-b8e4-7a3f4d920949.gif)
 
 ## About
 
