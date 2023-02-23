@@ -44,13 +44,16 @@ The app is a sample quiz with integration of Firebase. The categories are added 
   </tr>
 </table>
 
-## Screenshots
+<table><tr><td><img src ="https://user-images.githubusercontent.com/86681482/220996084-7e4a72a9-50eb-4aff-acec-630db01d1254.png"/></td>
+<td><img src ="https://user-images.githubusercontent.com/86681482/220996297-adcab56e-d7d7-444a-b84f-52d80cbbb816.png"/></td>
+<td> <img src ="https://user-images.githubusercontent.com/86681482/220996420-1c2c9a13-d2e5-4254-b5ff-bc1d6240e422.png"/></td>
+<td><img src ="https://user-images.githubusercontent.com/86681482/220996583-0e482285-be35-48ac-a1b3-78cf63171255.png"/></td></tr>
 
-![App Screenshot](https://github.com/kodeflap/GameApp/blob/master/screenshot/png_20211117_120144_0000.png)
-<table><tr><td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-29-14-26.png"/></td>
-<td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-29-33-77.png"/></td>
-<td> <img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-29-38-68.png"/></td>
-<td><img src ="https://github.com/poojaOfficial321/GameApp/blob/master/screenshot/Screenshot_2022-01-07-00-30-12-15.png"/></td></tr></table>
+ <tr><td><img src ="https://user-images.githubusercontent.com/86681482/220996743-d6be3a04-ab8f-4976-b2df-1df53c476dd5.png"/>
+  <td><img src ="https://user-images.githubusercontent.com/86681482/220996872-2ac543f4-65f8-41c1-808c-1124faf274ee.png"/>
+    <td><img src ="https://user-images.githubusercontent.com/86681482/220996970-7382eac1-4959-42c7-81cc-585631bdaf51.png"/>
+      <td><img src ="https://user-images.githubusercontent.com/86681482/220997061-1f0b0ba8-da2b-4050-9059-4208211240ed.png"/>
+  </td></tr></table>
 
 ## Lessons Learned
 
