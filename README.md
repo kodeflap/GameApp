@@ -3,6 +3,8 @@
 # <table><tr><td><img src= "https://github.com/kodeflap/GameApp/blob/master/screenshot/20211117_114241_0000.png" height = 50px width = 50px/></td>
 <td>Tork(Quiz game app)</td></tr></table>
 
+https://user-images.githubusercontent.com/86681482/221004080-277deb20-eddd-41a8-924e-068c7eda539d.mp4
+
 ## About
 
 The app is a sample quiz with integration of Firebase. The categories are added in Firestore and fetched to show.The user is authention is done by Google auth.The quizes are time bound  and coins are added as reward from a starting of 10 coins.
